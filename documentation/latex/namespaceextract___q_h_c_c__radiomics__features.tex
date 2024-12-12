@@ -1,0 +1,191 @@
+\doxysection{extract\+\_\+\+QHCC\+\_\+radiomics\+\_\+features Namespace Reference}
+\hypertarget{namespaceextract___q_h_c_c__radiomics__features}{}\label{namespaceextract___q_h_c_c__radiomics__features}\index{extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}}
+
+
+Extracting radiomics features from medical images with given masks.  
+
+
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a2b0a3215af1bb5f780613baf5506623c}{extractor}} = featureextractor.\+Radiomics\+Feature\+Extractor()
+\begin{DoxyCompactList}\small\item\em Initialize the Py\+Radiomics feature extractor. \end{DoxyCompactList}\item 
+str \mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_ad679da01272e62693b68e02918a1d474}{mri\+\_\+dir}} = "{}./data/L1\+\_\+files"{}
+\begin{DoxyCompactList}\small\item\em File paths\+: MRI image and Mask file directories. \end{DoxyCompactList}\item 
+str \mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a223502ca7993265c9025172a4a5486a4}{mask\+\_\+dir}} = "{}./data/L1\+\_\+files\+\_\+mask"{}
+\item 
+\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a33d3aee44a734c048b0253b18758b2b5}{mri\+\_\+files}} = sorted(\mbox{[}f for f in os.\+listdir(\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_ad679da01272e62693b68e02918a1d474}{mri\+\_\+dir}}) if f.\+endswith("{}.nii"{})\mbox{]})
+\begin{DoxyCompactList}\small\item\em Get lists of MRI and Mask files default file format\+: "{}.\+nii"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_af1e0491c9af07f05297ba977a0b78e53}{mask\+\_\+files}} = sorted(\mbox{[}f for f in os.\+listdir(\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a223502ca7993265c9025172a4a5486a4}{mask\+\_\+dir}}) if f.\+endswith("{}.nii"{})\mbox{]})
+\item 
+\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_adbd1d27ef52081e9a2172998c49c3841}{radiomics\+\_\+data}} = pd.\+Data\+Frame()
+\begin{DoxyCompactList}\small\item\em Initialize a Data\+Frame to store the features. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_aa38451e38523451eb62a340356528a5d}{mri\+\_\+path}} = os.\+path.\+join(\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_ad679da01272e62693b68e02918a1d474}{mri\+\_\+dir}}, mri\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Batch processing. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a2e322f6f5a95b0721f33bcb5af0ca11a}{mask\+\_\+path}} = os.\+path.\+join(\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a223502ca7993265c9025172a4a5486a4}{mask\+\_\+dir}}, mask\+\_\+file)
+\item 
+\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a9d90f59b8a18ec4539755b9200ad38aa}{image}} = sitk.\+Read\+Image(\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_aa38451e38523451eb62a340356528a5d}{mri\+\_\+path}})
+\begin{DoxyCompactList}\small\item\em Load MRI image and Mask. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a84c8575f88541ad62ff8570c0817598e}{mask}} = sitk.\+Read\+Image(\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a2e322f6f5a95b0721f33bcb5af0ca11a}{mask\+\_\+path}})
+\item 
+\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a66e9bc0d10bc676c199a41aa9cba9293}{temp\+\_\+mri\+\_\+path}} = os.\+path.\+join(\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_ad679da01272e62693b68e02918a1d474}{mri\+\_\+dir}}, f"{}temp\+\_\+\{mri\+\_\+file\}"{})
+\begin{DoxyCompactList}\small\item\em Save the adjusted MRI image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a6900894cf06ada64178e761664d1aad9}{features}} = extractor.\+execute(\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a66e9bc0d10bc676c199a41aa9cba9293}{temp\+\_\+mri\+\_\+path}}, \mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a2e322f6f5a95b0721f33bcb5af0ca11a}{mask\+\_\+path}})
+\begin{DoxyCompactList}\small\item\em Extract features. \end{DoxyCompactList}\item 
+dict \mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a87dabad23b3c33422bb8a454ef29d871}{flat\+\_\+features}} = \{key\+: value for key, value in features.\+items()\}
+\begin{DoxyCompactList}\small\item\em Flatten features and convert them to a Data\+Frame row ~\newline
+ Use the filename as the ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a8b122bf9dc6bf9bd992b0f75c938e76a}{feature\+\_\+row}} = pd.\+Data\+Frame(\mbox{[}\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a87dabad23b3c33422bb8a454ef29d871}{flat\+\_\+features}}\mbox{]}, \mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_ac0230153d20af8fff94de9d364cf8296}{index}}=\mbox{[}mri\+\_\+file.\+split(\textquotesingle{}.\textquotesingle{})\mbox{[}0\mbox{]}\mbox{]})
+\item 
+str \mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a3648c023c15c0aa0a789e5673ae23db5}{output\+\_\+path}} = "{}radiomics\+\_\+features.\+csv"{}
+\begin{DoxyCompactList}\small\item\em Save Radiomics features to CSV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_ac0230153d20af8fff94de9d364cf8296}{index}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Extracting radiomics features from medical images with given masks. 
+
+\begin{DoxyVersion}{Version}
+v1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceextract___q_h_c_c__radiomics__features_a2b0a3215af1bb5f780613baf5506623c}\index{extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}!extractor@{extractor}}
+\index{extractor@{extractor}!extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}}
+\doxysubsubsection{\texorpdfstring{extractor}{extractor}}
+{\footnotesize\ttfamily \label{namespaceextract___q_h_c_c__radiomics__features_a2b0a3215af1bb5f780613baf5506623c} 
+extract\+\_\+\+QHCC\+\_\+radiomics\+\_\+features.\+extractor = featureextractor.\+Radiomics\+Feature\+Extractor()}
+
+
+
+Initialize the Py\+Radiomics feature extractor. 
+
+\Hypertarget{namespaceextract___q_h_c_c__radiomics__features_a8b122bf9dc6bf9bd992b0f75c938e76a}\index{extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}!feature\_row@{feature\_row}}
+\index{feature\_row@{feature\_row}!extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}}
+\doxysubsubsection{\texorpdfstring{feature\_row}{feature\_row}}
+{\footnotesize\ttfamily \label{namespaceextract___q_h_c_c__radiomics__features_a8b122bf9dc6bf9bd992b0f75c938e76a} 
+extract\+\_\+\+QHCC\+\_\+radiomics\+\_\+features.\+feature\+\_\+row = pd.\+Data\+Frame(\mbox{[}\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a87dabad23b3c33422bb8a454ef29d871}{flat\+\_\+features}}\mbox{]}, \mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_ac0230153d20af8fff94de9d364cf8296}{index}}=\mbox{[}mri\+\_\+file.\+split(\textquotesingle{}.\textquotesingle{})\mbox{[}0\mbox{]}\mbox{]})}
+
+\Hypertarget{namespaceextract___q_h_c_c__radiomics__features_a6900894cf06ada64178e761664d1aad9}\index{extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}!features@{features}}
+\index{features@{features}!extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}}
+\doxysubsubsection{\texorpdfstring{features}{features}}
+{\footnotesize\ttfamily \label{namespaceextract___q_h_c_c__radiomics__features_a6900894cf06ada64178e761664d1aad9} 
+extract\+\_\+\+QHCC\+\_\+radiomics\+\_\+features.\+features = extractor.\+execute(\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a66e9bc0d10bc676c199a41aa9cba9293}{temp\+\_\+mri\+\_\+path}}, \mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a2e322f6f5a95b0721f33bcb5af0ca11a}{mask\+\_\+path}})}
+
+
+
+Extract features. 
+
+\Hypertarget{namespaceextract___q_h_c_c__radiomics__features_a87dabad23b3c33422bb8a454ef29d871}\index{extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}!flat\_features@{flat\_features}}
+\index{flat\_features@{flat\_features}!extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}}
+\doxysubsubsection{\texorpdfstring{flat\_features}{flat\_features}}
+{\footnotesize\ttfamily \label{namespaceextract___q_h_c_c__radiomics__features_a87dabad23b3c33422bb8a454ef29d871} 
+dict extract\+\_\+\+QHCC\+\_\+radiomics\+\_\+features.\+flat\+\_\+features = \{key\+: value for key, value in features.\+items()\}}
+
+
+
+Flatten features and convert them to a Data\+Frame row ~\newline
+ Use the filename as the ID. 
+
+\Hypertarget{namespaceextract___q_h_c_c__radiomics__features_a9d90f59b8a18ec4539755b9200ad38aa}\index{extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}!image@{image}}
+\index{image@{image}!extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}}
+\doxysubsubsection{\texorpdfstring{image}{image}}
+{\footnotesize\ttfamily \label{namespaceextract___q_h_c_c__radiomics__features_a9d90f59b8a18ec4539755b9200ad38aa} 
+extract\+\_\+\+QHCC\+\_\+radiomics\+\_\+features.\+image = sitk.\+Read\+Image(\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_aa38451e38523451eb62a340356528a5d}{mri\+\_\+path}})}
+
+
+
+Load MRI image and Mask. 
+
+\Hypertarget{namespaceextract___q_h_c_c__radiomics__features_ac0230153d20af8fff94de9d364cf8296}\index{extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}!index@{index}}
+\index{index@{index}!extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{namespaceextract___q_h_c_c__radiomics__features_ac0230153d20af8fff94de9d364cf8296} 
+extract\+\_\+\+QHCC\+\_\+radiomics\+\_\+features.\+index}
+
+\Hypertarget{namespaceextract___q_h_c_c__radiomics__features_a84c8575f88541ad62ff8570c0817598e}\index{extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}!mask@{mask}}
+\index{mask@{mask}!extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}}
+\doxysubsubsection{\texorpdfstring{mask}{mask}}
+{\footnotesize\ttfamily \label{namespaceextract___q_h_c_c__radiomics__features_a84c8575f88541ad62ff8570c0817598e} 
+extract\+\_\+\+QHCC\+\_\+radiomics\+\_\+features.\+mask = sitk.\+Read\+Image(\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a2e322f6f5a95b0721f33bcb5af0ca11a}{mask\+\_\+path}})}
+
+\Hypertarget{namespaceextract___q_h_c_c__radiomics__features_a223502ca7993265c9025172a4a5486a4}\index{extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}!mask\_dir@{mask\_dir}}
+\index{mask\_dir@{mask\_dir}!extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}}
+\doxysubsubsection{\texorpdfstring{mask\_dir}{mask\_dir}}
+{\footnotesize\ttfamily \label{namespaceextract___q_h_c_c__radiomics__features_a223502ca7993265c9025172a4a5486a4} 
+str extract\+\_\+\+QHCC\+\_\+radiomics\+\_\+features.\+mask\+\_\+dir = "{}./data/L1\+\_\+files\+\_\+mask"{}}
+
+\Hypertarget{namespaceextract___q_h_c_c__radiomics__features_af1e0491c9af07f05297ba977a0b78e53}\index{extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}!mask\_files@{mask\_files}}
+\index{mask\_files@{mask\_files}!extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}}
+\doxysubsubsection{\texorpdfstring{mask\_files}{mask\_files}}
+{\footnotesize\ttfamily \label{namespaceextract___q_h_c_c__radiomics__features_af1e0491c9af07f05297ba977a0b78e53} 
+extract\+\_\+\+QHCC\+\_\+radiomics\+\_\+features.\+mask\+\_\+files = sorted(\mbox{[}f for f in os.\+listdir(\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a223502ca7993265c9025172a4a5486a4}{mask\+\_\+dir}}) if f.\+endswith("{}.nii"{})\mbox{]})}
+
+\Hypertarget{namespaceextract___q_h_c_c__radiomics__features_a2e322f6f5a95b0721f33bcb5af0ca11a}\index{extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}!mask\_path@{mask\_path}}
+\index{mask\_path@{mask\_path}!extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}}
+\doxysubsubsection{\texorpdfstring{mask\_path}{mask\_path}}
+{\footnotesize\ttfamily \label{namespaceextract___q_h_c_c__radiomics__features_a2e322f6f5a95b0721f33bcb5af0ca11a} 
+extract\+\_\+\+QHCC\+\_\+radiomics\+\_\+features.\+mask\+\_\+path = os.\+path.\+join(\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_a223502ca7993265c9025172a4a5486a4}{mask\+\_\+dir}}, mask\+\_\+file)}
+
+\Hypertarget{namespaceextract___q_h_c_c__radiomics__features_ad679da01272e62693b68e02918a1d474}\index{extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}!mri\_dir@{mri\_dir}}
+\index{mri\_dir@{mri\_dir}!extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}}
+\doxysubsubsection{\texorpdfstring{mri\_dir}{mri\_dir}}
+{\footnotesize\ttfamily \label{namespaceextract___q_h_c_c__radiomics__features_ad679da01272e62693b68e02918a1d474} 
+str extract\+\_\+\+QHCC\+\_\+radiomics\+\_\+features.\+mri\+\_\+dir = "{}./data/L1\+\_\+files"{}}
+
+
+
+File paths\+: MRI image and Mask file directories. 
+
+\Hypertarget{namespaceextract___q_h_c_c__radiomics__features_a33d3aee44a734c048b0253b18758b2b5}\index{extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}!mri\_files@{mri\_files}}
+\index{mri\_files@{mri\_files}!extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}}
+\doxysubsubsection{\texorpdfstring{mri\_files}{mri\_files}}
+{\footnotesize\ttfamily \label{namespaceextract___q_h_c_c__radiomics__features_a33d3aee44a734c048b0253b18758b2b5} 
+extract\+\_\+\+QHCC\+\_\+radiomics\+\_\+features.\+mri\+\_\+files = sorted(\mbox{[}f for f in os.\+listdir(\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_ad679da01272e62693b68e02918a1d474}{mri\+\_\+dir}}) if f.\+endswith("{}.nii"{})\mbox{]})}
+
+
+
+Get lists of MRI and Mask files default file format\+: "{}.\+nii"{}. 
+
+\Hypertarget{namespaceextract___q_h_c_c__radiomics__features_aa38451e38523451eb62a340356528a5d}\index{extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}!mri\_path@{mri\_path}}
+\index{mri\_path@{mri\_path}!extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}}
+\doxysubsubsection{\texorpdfstring{mri\_path}{mri\_path}}
+{\footnotesize\ttfamily \label{namespaceextract___q_h_c_c__radiomics__features_aa38451e38523451eb62a340356528a5d} 
+extract\+\_\+\+QHCC\+\_\+radiomics\+\_\+features.\+mri\+\_\+path = os.\+path.\+join(\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_ad679da01272e62693b68e02918a1d474}{mri\+\_\+dir}}, mri\+\_\+file)}
+
+
+
+Batch processing. 
+
+\Hypertarget{namespaceextract___q_h_c_c__radiomics__features_a3648c023c15c0aa0a789e5673ae23db5}\index{extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}!output\_path@{output\_path}}
+\index{output\_path@{output\_path}!extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}}
+\doxysubsubsection{\texorpdfstring{output\_path}{output\_path}}
+{\footnotesize\ttfamily \label{namespaceextract___q_h_c_c__radiomics__features_a3648c023c15c0aa0a789e5673ae23db5} 
+extract\+\_\+\+QHCC\+\_\+radiomics\+\_\+features.\+output\+\_\+path = "{}radiomics\+\_\+features.\+csv"{}}
+
+
+
+Save Radiomics features to CSV. 
+
+\Hypertarget{namespaceextract___q_h_c_c__radiomics__features_adbd1d27ef52081e9a2172998c49c3841}\index{extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}!radiomics\_data@{radiomics\_data}}
+\index{radiomics\_data@{radiomics\_data}!extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}}
+\doxysubsubsection{\texorpdfstring{radiomics\_data}{radiomics\_data}}
+{\footnotesize\ttfamily \label{namespaceextract___q_h_c_c__radiomics__features_adbd1d27ef52081e9a2172998c49c3841} 
+extract\+\_\+\+QHCC\+\_\+radiomics\+\_\+features.\+radiomics\+\_\+data = pd.\+Data\+Frame()}
+
+
+
+Initialize a Data\+Frame to store the features. 
+
+Add to the main Data\+Frame. \Hypertarget{namespaceextract___q_h_c_c__radiomics__features_a66e9bc0d10bc676c199a41aa9cba9293}\index{extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}!temp\_mri\_path@{temp\_mri\_path}}
+\index{temp\_mri\_path@{temp\_mri\_path}!extract\_QHCC\_radiomics\_features@{extract\_QHCC\_radiomics\_features}}
+\doxysubsubsection{\texorpdfstring{temp\_mri\_path}{temp\_mri\_path}}
+{\footnotesize\ttfamily \label{namespaceextract___q_h_c_c__radiomics__features_a66e9bc0d10bc676c199a41aa9cba9293} 
+extract\+\_\+\+QHCC\+\_\+radiomics\+\_\+features.\+temp\+\_\+mri\+\_\+path = os.\+path.\+join(\mbox{\hyperlink{namespaceextract___q_h_c_c__radiomics__features_ad679da01272e62693b68e02918a1d474}{mri\+\_\+dir}}, f"{}temp\+\_\+\{mri\+\_\+file\}"{})}
+
+
+
+Save the adjusted MRI image. 
+
