@@ -23,3 +23,11 @@ python extract_QHCC_radiomics_features.py
 ```bash
 python demo_QHCC_XGBoost.py
 ```
+
+Cross-Validation Results on prediction with Redcap data and lab data:
+Mean Accuracy: 0.40 ± 0.07
+Mean AUC: 0.45 ± 0.10
+
+Cross-Validation Results on prediction with Redcap data, lab data, and radiomics features:
+Mean Accuracy: 0.81 ± 0.08
+Mean AUC: 0.86 ± 0.06
