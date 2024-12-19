@@ -1,4 +1,4 @@
-# QHCC
+# A baseline for machine-learning-based hepatocellular carcinoma diagnosis using multi-modal clinical data--QHCC
 ## The example codes about how to use the QHCC dataset for machine learning tasks
 
 ## Dependencies
