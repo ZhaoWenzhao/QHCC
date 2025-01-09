@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.25)  15 DEC 2024 20:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.25)  9 JAN 2025 20:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -874,115 +874,226 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 
 ]
 Package hyperref Info: Option `pageanchor' set `true' on input line 233.
-
+ (md__c_1_2git__repo_2_q_h_c_c_2_r_e_a_d_m_e.tex
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 18.66588pt on input line 235.
+(Font)              scaled to size 18.66588pt on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 18.66588pt on input line 235.
+(Font)              scaled to size 18.66588pt on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 235.
-(namespaces.tex
+(Font)              scaled to size 22.39185pt on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 1.
-) [1
-
-] [2
-
-]
-Chapter 2.
-(files.tex) [3] [4
-
-]
-Chapter 3.
-(namespacedemo___q_h_c_c___x_g_boost.tex
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
-1.
-
+(Font)              scaled to size 12.9599pt on input line 5.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 9
+.
 (C:\Users\Zhao\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 11.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 12.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 12.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 12.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 12.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.29996pt on input line 12.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 21.
-LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 8.99994pt on input line 24.
-
-Underfull \hbox (badness 10000) detected at line 24
-[][][]
- []
-
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 33.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 33
+(Font)              scaled to size 8.99994pt on input line 9.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 20
 .
+
 (C:\Users\Zhao\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 34.
-
-[5]
-Underfull \hbox (badness 10000) detected at line 49
-[][][]
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]88 \TS1/phv/m/n/10 ±
  []
 
 
-Underfull \hbox (badness 10000) detected at line 69
-[][][]
- []
-
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 84.
-[6]
-Underfull \hbox (badness 10000) detected at line 105
-[][][]
- []
-
-) (namespaceextract___q_h_c_c__radiomics__features.tex [7]
-Underfull \hbox (badness 10000) detected at line 49
-[][][]
- []
-
-LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 6
-9.
-(C:\Users\Zhao\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pcr.fd
-File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
-\T1/pcr/m/n/8 extract[]_[][]QHCC[]_[]radiomics[]_[]features.[]feature[]_[]row =
- pd.[]Data[]Frame([][][], []=[]mri[]_[]file.[]
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]90 \TS1/phv/m/n/10 ±
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
-\T1/pcr/m/n/8 extract[]_[][]QHCC[]_[]radiomics[]_[]features.[]mask[]_[]files = 
-sorted([]f for f in os.[]listdir([]) if f.[]
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]51 \TS1/phv/m/n/10 ±
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
-\T1/pcr/m/n/8 extract[]_[][]QHCC[]_[]radiomics[]_[]features.[]mri[]_[]files = s
-orted([]f for f in os.[]listdir([]) if f.[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]68 \TS1/phv/m/n/10 ±
  []
 
-) [9] [10
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]83 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]90 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]55 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]64 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]83 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]88 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]49 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]65 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]89 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]93 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]51 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]57 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]88 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]90 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]55 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]69 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]86 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]92 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]54 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]60 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]82 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]88 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]48 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]50 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]85 \TS1/phv/m/n/10 ±
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]\T1/phv/m/n/10 0.[]90 \TS1/phv/m/n/10 ±
+ []
+
+[1
+
+])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[2]
+Chapter 2.
+(namespaces.tex) [3
+
+] [4
 
 ]
-Chapter 4.
-(demo___q_h_c_c___x_g_boost_8py.tex)
-(extract___q_h_c_c__radiomics__features_8py.tex [11]) [12]
+Chapter 3.
+(namespacedemo___q_h_c_c___x_g_boost.tex
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 10.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 8.99994pt on input line 13.
+
+Underfull \hbox (badness 10000) detected at line 13
+[][][]
+ []
+
+) (namespaceextract___q_h_c_c__radiomics__features.tex
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 13.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 13.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 13.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 13.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 6.29996pt on input line 13.
+ [5]
+Underfull \hbox (badness 10000) detected at line 64
+[][][]
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 73.
+) [6]
 No file refman.ind.
 (refman.aux)
  ***********
@@ -990,28 +1101,26 @@ LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
  ***********
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 1DBEC832E50EC82515697FF1DAA56595;6424.
+(rerunfilecheck)             Checksum: CF6676122543D2D5713DEDDA3D21B498;3593.
  ) 
 Here is how much of TeX's memory you used:
- 17948 strings out of 474586
- 292500 string characters out of 5746152
- 1952558 words of memory out of 5000000
- 39726 multiletter control sequences out of 15000+600000
- 606512 words of font info for 86 fonts, out of 8000000 for 9000
+ 17847 strings out of 474586
+ 290475 string characters out of 5746152
+ 1946558 words of memory out of 5000000
+ 39668 multiletter control sequences out of 15000+600000
+ 602390 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,15n,117p,678b,741s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,14n,117p,677b,702s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Zhao/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mmi7.pfb><C:/Users/Zhao/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmsy7.pfb><C:/Users/Zhao/AppData/Local/Programs/MiKTeX/fonts/type1/urw/co
-urier/ucrr8a.pfb><C:/Users/Zhao/AppData/Local/Programs/MiKTeX/fonts/type1/urw/c
-ourier/ucrro8a.pfb><C:/Users/Zhao/AppData/Local/Programs/MiKTeX/fonts/type1/urw
-/helvetic/uhvb8a.pfb><C:/Users/Zhao/AppData/Local/Programs/MiKTeX/fonts/type1/u
-rw/helvetic/uhvb8ac.pfb><C:/Users/Zhao/AppData/Local/Programs/MiKTeX/fonts/type
-1/urw/helvetic/uhvr8a.pfb><C:/Users/Zhao/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (16 pages, 155408 bytes).
+msy10.pfb><C:/Users/Zhao/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/
+ucrr8a.pfb><C:/Users/Zhao/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helveti
+c/uhvb8a.pfb><C:/Users/Zhao/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helve
+tic/uhvb8ac.pfb><C:/Users/Zhao/AppData/Local/Programs/MiKTeX/fonts/type1/urw/he
+lvetic/uhvr8a.pfb><C:/Users/Zhao/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
+helvetic/uhvro8a.pfb>
+Output written on refman.pdf (10 pages, 93440 bytes).
 PDF statistics:
- 416 PDF objects out of 1000 (max. 8388607)
- 81 named destinations out of 1000 (max. 500000)
- 273 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 196 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 

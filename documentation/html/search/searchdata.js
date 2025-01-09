@@ -1,27 +1,24 @@
 var indexSectionsWithContent =
 {
-  0: "adefimort",
+  0: "abcdefhilmnoqrstu",
   1: "de",
-  2: "de",
-  3: "aem",
-  4: "efimort"
+  2: "efimort",
+  3: "abcdfhlmnqu"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "namespaces",
-  2: "files",
-  3: "functions",
-  4: "variables"
+  2: "variables",
+  3: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "All",
   1: "Namespaces",
-  2: "Files",
-  3: "Functions",
-  4: "Variables"
+  2: "Variables",
+  3: "Pages"
 };
 

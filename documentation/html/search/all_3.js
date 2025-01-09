@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['feature_5frow_0',['feature_row',['../namespaceextract___q_h_c_c__radiomics__features.html#a8b122bf9dc6bf9bd992b0f75c938e76a',1,'extract_QHCC_radiomics_features']]],
-  ['features_1',['features',['../namespaceextract___q_h_c_c__radiomics__features.html#a6900894cf06ada64178e761664d1aad9',1,'extract_QHCC_radiomics_features']]],
-  ['flat_5ffeatures_2',['flat_features',['../namespaceextract___q_h_c_c__radiomics__features.html#a87dabad23b3c33422bb8a454ef29d871',1,'extract_QHCC_radiomics_features']]]
+  ['data_20ndash_20qhcc_0',['A baseline for machine-learning-based hepatocellular carcinoma diagnosis using multi-modal clinical data&amp;ndash;QHCC',['../md__c_1_2git__repo_2_q_h_c_c_2_r_e_a_d_m_e.html',1,'']]],
+  ['dataset_20for_20machine_20learning_20tasks_1',['The example codes about how to use the QHCC dataset for machine learning tasks',['../md__c_1_2git__repo_2_q_h_c_c_2_r_e_a_d_m_e.html#autotoc_md1',1,'']]],
+  ['demo_5fqhcc_5fxgboost_2',['demo_QHCC_XGBoost',['../namespacedemo___q_h_c_c___x_g_boost.html',1,'']]],
+  ['dependencies_3',['Dependencies',['../md__c_1_2git__repo_2_q_h_c_c_2_r_e_a_d_m_e.html#autotoc_md2',1,'']]],
+  ['diagnosis_20using_20multi_20modal_20clinical_20data_20ndash_20qhcc_4',['A baseline for machine-learning-based hepatocellular carcinoma diagnosis using multi-modal clinical data&amp;ndash;QHCC',['../md__c_1_2git__repo_2_q_h_c_c_2_r_e_a_d_m_e.html',1,'']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['auto_5ffeature_5fselect_0',['auto_feature_select',['../namespacedemo___q_h_c_c___x_g_boost.html#ae4df7f980f14c976c624144a0887b14b',1,'demo_QHCC_XGBoost']]]
+  ['a_20baseline_20for_20machine_20learning_20based_20hepatocellular_20carcinoma_20diagnosis_20using_20multi_20modal_20clinical_20data_20ndash_20qhcc_0',['A baseline for machine-learning-based hepatocellular carcinoma diagnosis using multi-modal clinical data&amp;ndash;QHCC',['../md__c_1_2git__repo_2_q_h_c_c_2_r_e_a_d_m_e.html',1,'']]],
+  ['about_20how_20to_20use_20the_20qhcc_20dataset_20for_20machine_20learning_20tasks_1',['The example codes about how to use the QHCC dataset for machine learning tasks',['../md__c_1_2git__repo_2_q_h_c_c_2_r_e_a_d_m_e.html#autotoc_md1',1,'']]]
 ];
