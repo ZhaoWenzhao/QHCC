@@ -110,17 +110,19 @@ Extracting radiomics features</h1>
 Experiments on TNM staging</h1>
 <div class="fragment"><div class="line">python demo_QHCC_XGBoost.py</div>
 </div><!-- fragment --><p>Cross-Validation Results on different combinations of input data:</p>
-<p>| Data type | Redcap data || Lab data || Redcap + Lab data || Null || </p><table class="markdownTable">
+<table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone"></th><th class="markdownTableHeadNone">ACC   </th><th class="markdownTableHeadNone">AUC   </th><th class="markdownTableHeadNone">ACC   </th><th class="markdownTableHeadNone">AUC   </th><th class="markdownTableHeadNone">ACC   </th><th class="markdownTableHeadNone">AUC   </th><th class="markdownTableHeadNone">ACC   </th><th class="markdownTableHeadNone">AUC    </th></tr>
+<th class="markdownTableHeadCenter">Data type   </th><th class="markdownTableHeadCenter">Redcap data   </th><th class="markdownTableHeadCenter">Lab data   </th><th class="markdownTableHeadCenter">Redcap + Lab data   </th><th class="markdownTableHeadCenter">Null    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">CT   </td><td class="markdownTableBodyNone">0.88 ± 0.04   </td><td class="markdownTableBodyNone">0.90 ± 0.06   </td><td class="markdownTableBodyNone">0.51 ± 0.08   </td><td class="markdownTableBodyNone">0.68 ± 0.08   </td><td class="markdownTableBodyNone">0.83 ± 0.07   </td><td class="markdownTableBodyNone">0.90 ± 0.02   </td><td class="markdownTableBodyNone">0.55 ± 0.08   </td><td class="markdownTableBodyNone">0.64 ± 0.06    </td></tr>
+<td class="markdownTableBodyCenter"></td><td class="markdownTableBodyCenter">ACC | AUC   </td><td class="markdownTableBodyCenter">ACC | AUC   </td><td class="markdownTableBodyCenter">ACC | AUC   </td><td class="markdownTableBodyCenter">ACC | AUC    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">MRI   </td><td class="markdownTableBodyNone">0.83 ± 0.12   </td><td class="markdownTableBodyNone">0.88 ± 0.09   </td><td class="markdownTableBodyNone">0.49 ± 0.06   </td><td class="markdownTableBodyNone">0.65 ± 0.10   </td><td class="markdownTableBodyNone">0.89 ± 0.05   </td><td class="markdownTableBodyNone">0.93 ± 0.03   </td><td class="markdownTableBodyNone">0.51 ± 0.10   </td><td class="markdownTableBodyNone">0.57 ± 0.08    </td></tr>
+<td class="markdownTableBodyCenter">CT   </td><td class="markdownTableBodyCenter">0.88 ± 0.04 | 0.90 ± 0.06   </td><td class="markdownTableBodyCenter">0.51 ± 0.08 | 0.68 ± 0.08   </td><td class="markdownTableBodyCenter">0.83 ± 0.07 | 0.90 ± 0.02   </td><td class="markdownTableBodyCenter">0.55 ± 0.08 | 0.64 ± 0.06    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">CT + MRI   </td><td class="markdownTableBodyNone">0.88 ± 0.05   </td><td class="markdownTableBodyNone">0.90 ± 0.07   </td><td class="markdownTableBodyNone">0.55 ± 0.04   </td><td class="markdownTableBodyNone">0.69 ± 0.09   </td><td class="markdownTableBodyNone">0.86 ± 0.03   </td><td class="markdownTableBodyNone">0.92 ± 0.02   </td><td class="markdownTableBodyNone">0.54 ± 0.09   </td><td class="markdownTableBodyNone">0.60 ± 0.03    </td></tr>
+<td class="markdownTableBodyCenter">MRI   </td><td class="markdownTableBodyCenter">0.83 ± 0.12 | 0.88 ± 0.09   </td><td class="markdownTableBodyCenter">0.49 ± 0.06 | 0.65 ± 0.10   </td><td class="markdownTableBodyCenter">0.89 ± 0.05 | 0.93 ± 0.03   </td><td class="markdownTableBodyCenter">0.51 ± 0.10 | 0.57 ± 0.08    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Null   </td><td class="markdownTableBodyNone">0.82 ± 0.12   </td><td class="markdownTableBodyNone">0.88 ± 0.12   </td><td class="markdownTableBodyNone">0.48 ± 0.06   </td><td class="markdownTableBodyNone">0.50 ± 0.06   </td><td class="markdownTableBodyNone">0.85 ± 0.07   </td><td class="markdownTableBodyNone">0.90 ± 0.04   </td><td class="markdownTableBodyNone">Null   </td><td class="markdownTableBodyNone">Null   </td></tr>
+<td class="markdownTableBodyCenter">CT + MRI   </td><td class="markdownTableBodyCenter">0.88 ± 0.05 | 0.90 ± 0.07   </td><td class="markdownTableBodyCenter">0.55 ± 0.04 | 0.69 ± 0.09   </td><td class="markdownTableBodyCenter">0.86 ± 0.03 | 0.92 ± 0.02   </td><td class="markdownTableBodyCenter">0.54 ± 0.09 | 0.60 ± 0.03    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">Null   </td><td class="markdownTableBodyCenter">0.82 ± 0.12 | 0.88 ± 0.12   </td><td class="markdownTableBodyCenter">0.48 ± 0.06 | 0.50 ± 0.06   </td><td class="markdownTableBodyCenter">0.85 ± 0.07 | 0.90 ± 0.04   </td><td class="markdownTableBodyCenter">Null | Null   </td></tr>
 </table>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
