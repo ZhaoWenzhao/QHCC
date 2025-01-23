@@ -21,7 +21,7 @@ python extract_QHCC_radiomics_features.py
 ## Experiments on TNM staging
 
 ```bash
-python demo_QHCC_XGBoost.py
+python demo_QHCC_XGBoost_comb.py
 ```
 
 Cross-Validation Results on different combinations of input data:
