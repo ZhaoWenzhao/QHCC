@@ -1,6 +1,6 @@
 # Baselines for machine-learning-based hepatocellular carcinoma diagnosis using multi-modal clinical data--QHCC
 
-This repository provides machine learning baselines for two major tasks in hepatocellular carcinoma (HCC) diagnosis using the [QHCC dataset](#):  
+This repository provides machine learning baselines for two major tasks in hepatocellular carcinoma (HCC) diagnosis using the QHCC dataset:  
 1. **TNM staging prediction**
 2. **Recurrence prediction**
 
