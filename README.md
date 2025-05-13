@@ -10,7 +10,7 @@ We currently provide an XGBoost-based baseline for TNM staging classification ta
 
 - **XGBoost-based model**
 
-We provide two baseline methods for the recurrence prediction task:
+We provide two baseline methods for the Recurrence prediction task:
 
 - **XGBoost-based model**
 - **TabPFN-based model**
