@@ -17,6 +17,9 @@ All experiments are based on multi-modal data: clinical data, laboratory data, a
 * xgboost-2.1.3
 * pyradiomics-3.0.1
 * SimpleITK-2.4.0
+* imbalanced-learn-0.10.1
+* pymfe-0.4.3
+* tabpfn (install via pip from GitHub: `git+https://github.com/automl/TabPFN.git`)
 
 ## Extracting radiomics features
 Download the data and modify the folder path in extract_QHCC_radiomics_features.py accordingly.
