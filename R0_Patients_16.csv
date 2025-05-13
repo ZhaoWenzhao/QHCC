@@ -1,0 +1,76 @@
+QHCCID,initial ECOG,Grading Child-Turcotte-Pugh,initial Ascites,TNM Stage,initial Hepatic Encephalopaty,Histologic grade,initial Portal Vein Thrombosis,initial Hepatitis,BCLC stage,Child-Pugh stage,initial.Age..years.,initial.Gender,initial.Has.the.patient.been.diagnosed.with.other.cancer.before.,initial.Metastatic.lesions.detected.,Recurrence
+000GY029,0,6.0,Grade I,T1b,Grade 0,G1,No,No,Stage A,A or B,76,Male,No,No,0
+000ZW050,1,7.0,Grade I,T3,Grade 0,,No,C,Stage C,A or B,64,Male,No,No,1
+001GU0YE,0,6.0,Grade I,T1b,Grade 0,G1,No,C,Stage A,A or B,52,Male,,No,0
+001ZR0T4,0,6.0,Grade I,T1b,Grade 0,G2,Yes,No,Stage A,A or B,83,Male,No,No,0
+002ZM0R8,0,5.0,Grade I,T3,Grade 0,G2,No,No,Stage B,A or B,66,Female,No,No,1
+003GK035,1,8.0,Grade III,T1b,Grade 0,G1,Yes,B,Stage C,A or B,81,Male,No,No,1
+004GF0XT,1,6.0,Grade I,T2,Grade 0,G1,No,No,Stage C,A or B,80,Male,No,No,1
+005GA01X,1,5.0,Grade I,T1b,Grade 0,G2,No,C,Stage C,A or B,66,Male,No,No,0
+005Z806M,0,6.0,Grade I,T3,Grade 0,G2,No,No,Stage B,A or B,74,Male,No,No,1
+00GY001C,1,5.0,Grade I,T1b,Grade 0,G2,No,No,Stage C,A or B,66,Male,No,No,0
+08YW7F5R,0,6.0,Grade I,T2,Grade 0,G2,No,No,Stage A,A or B,73,Male,No,Yes,1
+10MXE2RK,1,8.0,Grade I,T1,Grades III or IV,G2,No,No,Stage C,A or B,77,Male,Yes,No,1
+19CAK8AW,0,5.0,Grade I,T2,Grade 0,G3,No,No,Stage A,A or B,79,Female,No,No,0
+20FY528A,1,6.0,Grade I,T2,Grade 0,G2,No,No,Stage C,A or B,64,Female,No,No,1
+20ZD322D,0,2.0,Grade I,T1,Grade 0,,No,No,No,No,55,Female,No,No,1
+29WT3M4Y,0,,,T3,Grades III or IV,G2,No,No,No,No,66,Male,No,No,0
+2T2D4LU4,1,6.0,Grade I,T1,Grade 0,,No,No,Stage C,A or B,79,Female,No,No,1
+30FF6J7Z,2,7.0,Grade I,T2,Grade 0,G2,No,C,Stage C,A or B,57,Male,No,Yes,1
+40EY8JG6,0,5.0,Grade I,T1b,Grade 0,G1,No,B,Stage A,A or B,63,Male,No,No,1
+40LXHJ62,0,7.0,Grade I,T1b,Grade 0,G2,No,No,Stage A,A or B,89,Male,Yes,No,0
+40YW4JZ1,1,5.0,Grade I,T1b,Grade 0,G1,No,No,Stage C,A or B,81,Male,Yes,No,1
+50EFA0JY,0,2.0,Grade I,T1,Grade 0,G2,No,B,No,No,76,Male,No,No,0
+5HLEK0KQ,0,5.0,Grade I,T1b,Grade 0,G2,No,No,Stage A,A or B,79,Male,No,No,1
+5TDAD4CR,0,5.0,Grade I,T1b,Grade 0,G1,No,No,Stage A,A or B,86,Male,Yes,No,1
+60DYD0DZ,0,2.0,Grade I,T1,Grade 0,G1,No,No,No,No,75,Male,Yes,No,0
+60YD607N,0,5.0,Grade I,T3,Grade 0,G2,No,No,Stage B,A or B,80,Male,Yes,No,0
+69RTRYZQ,1,5.0,Grade I,T1b,Grade 0,G2,No,No,Stage C,A or B,76,Male,No,No,0
+796CFR30,0,5.0,Grade I,T1b,Grade 0,G2,No,B,Stage A,A or B,53,Female,No,No,0
+80XW92D0,0,7.0,Grade I,,Grade 0,G2,,No,No,A or B,75,Male,No,,1
+89LA7H6H,0,5.0,Grade I,T1b,Grade 0,G2,No,No,Stage A,A or B,60,Male,No,No,0
+89N9WA1J,0,6.0,Grade I,T2,Grade 0,G2,No,C,Stage A,A or B,66,Female,Yes,No,0
+9THAR9VM,0,7.0,Grade I,T1b,Grade 0,G2,No,No,Stage A,A or B,85,Male,No,No,0
+A0XDAJ5T,0,5.0,Grade I,T1b,Grade 0,G1,No,No,Stage A,A or B,81,Male,No,No,0
+D0WWD09T,0,5.0,Grade I,T1b,Grade 0,G2,No,No,Stage A,A or B,78,Male,No,No,0
+D92VH0Z6,1,8.0,Grade I,T1b,Grade 0,G2,No,No,Stage C,A or B,77,Male,Yes,No,0
+ETT95Y09,0,5.0,Grade I,T1b,Grade 0,G2,No,No,Stage A,A or B,68,Female,No,No,1
+F0WDG2VN,0,5.0,Grade I,T1,Grade 0,,No,No,Stage O,A or B,76,Male,No,No,1
+G9AAQV0X,3,5.0,Grade I,T1a,Grade 0,G1,No,C,Stage D,A or B,70,Female,No,No,0
+H0VWHJJG,0,5.0,Grade I,T1,Grade 0,G2,No,No,Stage O,A or B,61,Female,,No,0
+H9QRWJDZ,0,6.0,Grade I,T4,Grade 0,G2,Yes,C,Stage C,A or B,77,Male,,No,0
+J9XRWZQC,0,5.0,Grade I,T2,Grade 0,G2,Yes,No,Stage A,A or B,74,Male,No,No,0
+LHDFG2Z8,0,5.0,Grade I,T3,Grade 0,G2,No,No,Stage B,A or B,73,Male,No,No,0
+LHTDV2EQ,0,5.0,Grade I,T1b,Grade 0,G2,No,No,Stage A,A or B,72,Male,Yes,No,0
+M0CYJ22D,0,8.0,Grade I,T3,Grade 0,G3,No,No,Stage B,A or B,73,Male,No,No,0
+M0UWN2G3,0,2.0,Grade I,T1,Grade 0,,No,No,No,No,86,Male,No,No,1
+MHCFL2G8,0,5.0,Grade I,T2,Grade 0,G2,No,No,Stage A,A or B,80,Female,No,No,0
+N0AYN2WD,0,6.0,Grade I,T3,Grade 0,G2,No,No,Stage B,A or B,65,Male,No,No,1
+N9TTLW2E,0,5.0,Grade I,,Grade 0,G2,,C,No,A or B,88,Female,No,,0
+NHAFPJVH,0,8.0,Grade I,T1a,Grade 0,G1,No,No,Stage O,A or B,78,Female,No,No,0
+NT3CZJAN,0,5.0,Grade I,T1b,Grade 0,G1,No,C,Stage A,A or B,85,Female,No,No,1
+P0UDPJ6U,0,2.0,Grade I,T1b,Grade 0,,No,No,No,No,75,Male,No,No,1
+PH9FUJWH,0,6.0,Grade I,T1b,Grade 0,G2,No,No,Stage A,A or B,89,Male,No,No,0
+PHRDYJJZ,1,6.0,Grade I,T2,Grade 0,G2,No,No,Stage C,A or B,85,Male,No,No,1
+Q08YWJGM,0,5.0,Grade I,TX,Grade 0,,No,No,No,A or B,74,Female,No,No,1
+R07Z00FL,0,8.0,Grade II,T2,Grade 0,G2,Yes,No,Stage A,A or B,77,Female,No,No,0
+R0QX00ZR,0,6.0,Grade I,T3,Grade 0,,No,No,Stage B,A or B,73,Male,Yes,No,0
+R0TWR07Q,0,5.0,Grade I,T3,Grade 0,G1,No,No,Stage B,A or B,72,Male,Yes,No,0
+R9AV589V,0,5.0,Grade I,T1b,Grade 0,G1,No,No,Stage A,A or B,79,Male,No,No,0
+R9MA1D6T,0,6.0,Grade I,T1b,Grade 0,G1,No,No,Stage A,A or B,62,Male,Yes,No,0
+RH7G203Q,1,2.0,Grade I,,Grade 0,,No,C,No,No,65,Male,No,No,0
+RTGAWU45,0,6.0,Grade I,T1b,Grade 0,G2,No,No,Stage A,A or B,85,Male,No,No,0
+RTY88DVE,0,5.0,Grade I,T1b,Grade 0,G1,No,No,Stage A,A or B,56,Female,No,No,0
+T06Z40HL,0,5.0,Grade I,T3,Grade 0,G1,No,No,Stage B,A or B,83,Male,No,No,1
+T97C7KML,1,5.0,Grade I,T4,Grade 0,G3,Yes,No,Stage C,A or B,66,Male,No,No,1
+TH6G60XQ,1,5.0,Grade I,T1b,Grade 0,G2,No,No,Stage C,A or B,73,Male,No,No,0
+THQE20HR,2,,,T1a,,G2,No,No,No,No,80,Male,Yes,No,1
+U0KXN299,0,4.0,Grade I,T4,Grade 0,G2,No,No,No,No,72,Male,No,No,1
+UTW8MM7U,1,5.0,Grade I,T2,Grade 0,G2,No,No,Stage C,A or B,43,Male,No,Yes,0
+V0KEQ2D4,0,5.0,Grade I,T1b,Grade 0,G2,No,No,Stage A,A or B,89,Male,,No,0
+V0PX52MX,1,5.0,Grade I,T2,Grade 0,G2,No,No,Stage C,A or B,75,Female,No,No,0
+W0JXRJF5,0,2.0,Grade I,T2,Grade 0,G1,No,No,No,No,88,Male,No,No,0
+X0JEUJC8,0,2.0,Grade I,,Grade 0,,,C,No,No,85,Male,,,1
+X9CV0Q2J,0,7.0,Grade I,T1b,Grade 0,G1,No,No,Stage A,A or B,82,Male,No,No,0
+Y0NX80F8,0,6.0,Grade I,T2,Grade 0,G2,No,No,Stage A,A or B,83,Male,Yes,No,0
+Z0HEY08J,1,2.0,Grade I,T1b,Grade 0,G1,No,No,No,No,83,Female,No,No,0
