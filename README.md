@@ -1,10 +1,17 @@
 # Baselines for machine-learning-based hepatocellular carcinoma diagnosis using multi-modal clinical data--QHCC
 
 This repository provides machine learning baselines for two major tasks in hepatocellular carcinoma (HCC) diagnosis using the QHCC dataset:  
-1. **TNM staging prediction**
+1. **TNM staging classification**
 2. **Recurrence prediction**
 
 All experiments are based on multi-modal data: clinical data, laboratory data, and imaging radiomics (CT/MRI).
+
+We provide two baseline methods for the recurrence prediction task:
+
+- **XGBoost-based model**: [`Recurrence/demo_QHCC_XGBoost_comb_recurrence.py`](Recurrence/demo_QHCC_XGBoost_comb_recurrence.py)
+- **TabPFN-based model**: [`Recurrence/demo_QHCC_Tabpfn_comb_recurrence.py`](Recurrence/demo_QHCC_Tabpfn_comb_recurrence.py)
+
+Both methods use the same multi-modal feature inputs and follow similar data preprocessing steps.
 
 ## The example codes about how to use the QHCC dataset for machine learning tasks
 
