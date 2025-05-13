@@ -6,7 +6,7 @@ This repository provides machine learning baselines for two major tasks in hepat
 
 All experiments are based on multi-modal data: clinical data, laboratory data, and imaging radiomics (CT/MRI).
 
-We currently provide an XGBoost-based baseline for TNM staging:
+We currently provide an XGBoost-based baseline for TNM staging classification task:
 
 - **XGBoost-based model**
 
