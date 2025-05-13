@@ -8,7 +8,7 @@ All experiments are based on multi-modal data: clinical data, laboratory data, a
 
 We currently provide an XGBoost-based baseline for TNM staging:
 
-- **XGBoost model**: [`TNM staging/demo_QHCC_XGBoost_comb.py`](TNM staging/demo_QHCC_XGBoost_comb.py)
+- **XGBoost model**: [`TNM staging/demo_QHCC_XGBoost_comb.py`](TNMstaging/demo_QHCC_XGBoost_comb.py)
 
 We provide two baseline methods for the recurrence prediction task:
 
