@@ -19,7 +19,7 @@ All experiments are based on multi-modal data: clinical data, laboratory data, a
 * SimpleITK-2.4.0
 * imbalanced-learn-0.10.1
 * pymfe-0.4.3
-* tabpfn (install via pip)
+* tabpfn-2.0.9
 
 ## Extracting radiomics features
 Download the data and modify the folder path in extract_QHCC_radiomics_features.py accordingly.
