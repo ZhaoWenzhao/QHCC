@@ -3,6 +3,7 @@
 # @brief The demo file for predicting recurrence in QHCC datasets using XGBoost, with adaptive preprocessing and feature selection
 import numpy as np
 import pandas as pd
+import random
 from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_selection import mutual_info_classif, SelectKBest
 from sklearn.impute import SimpleImputer
@@ -31,9 +32,9 @@ os.environ['OMP_NUM_THREADS'] = '1'
 # @param  k: integer, the number of feature elements to be selected
 # Output: 
 # @return selected_features: the indexes of the selected features
-def auto_feature_select(X0, y0, k=1):
+def auto_feature_select(X0, y0, k=1, seed=100):
     
-    selector = SelectKBest(mutual_info_classif, k=k)
+    selector = SelectKBest(lambda X, y: mutual_info_classif(X, y, random_state=seed), k=k)
     X_new = selector.fit_transform(X0, y0)
 
     ## Indices of the selected features
@@ -66,7 +67,8 @@ def find_best_threshold_by_f1(y_true, y_probs):
 # @return acc: accuracy 
 # @return auc: AUC (area under the curve) score
 def experiment_redcap_lab(df, ids_train, ids_test, seed = 100): 
-
+    np.random.seed(seed)
+    random.seed(seed)
     ## Copy data
     new_df = df.copy()
     ids_df = df["QHCCID"]
@@ -138,7 +140,7 @@ def experiment_redcap_lab(df, ids_train, ids_test, seed = 100):
     # Dimensionality reduction (PCA)
     if metafeatures.get("cor.mean", 0) > 0.9:
         print("Applying PCA due to high correlation...")
-        pca = PCA(n_components=min(10, X_train.shape[1]))
+        pca = PCA(n_components=min(10, X_train.shape[1]), random_state=seed)
         X_train_pca = pca.fit_transform(X_train)
         X_test_pca = pca.transform(X_test)
         
@@ -151,14 +153,15 @@ def experiment_redcap_lab(df, ids_train, ids_test, seed = 100):
     # Class imbalance handling (SMOTE)
     if metafeatures.get("class_ent", 0) < 0.5:
         print("Applying SMOTE due to class imbalance...")
-        smote = SMOTE(random_state=42)
+        smote = SMOTE(random_state=seed)
         X_train_smote, y_train_smote = smote.fit_resample(X_train, y_train)
         X_train = pd.DataFrame(X_train_smote, columns=X_train.columns)
         y_train = y_train_smote
     
     model = xgb.XGBClassifier(
         objective='binary:logistic',
-        eval_metric='logloss'
+        eval_metric='logloss',
+        random_state=seed
     )
 
     ## Feature selection to select the features with the highest mutual information values
@@ -166,7 +169,7 @@ def experiment_redcap_lab(df, ids_train, ids_test, seed = 100):
     
     min_features_to_select = X_train_imputed.shape[1]//2 # Minimum number of features to consider
     clf = model 
-    cv = StratifiedKFold(5)
+    cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=seed)
 
     rfecv = RFECV(
         estimator=clf,
@@ -181,7 +184,7 @@ def experiment_redcap_lab(df, ids_train, ids_test, seed = 100):
     print(f"Optimal number of features: {rfecv.n_features_}")    
     num_features = rfecv.n_features_
     
-    selected_features = auto_feature_select(X_train_imputed, y_train, k=num_features)
+    sselected_features = auto_feature_select(X_train_imputed, y_train, k=num_features, seed=seed)
             
     ## Retain the top features with the highest mutual information values
     if isinstance(X_train, pd.DataFrame): 
@@ -230,6 +233,8 @@ def experiment_redcap_lab(df, ids_train, ids_test, seed = 100):
 # @return  acc: accuracy 
 # @return  auc: AUC (area under the curve) score 
 def experiment_redcap_lab_radiomics(new_df, ids_train=None, ids_test=None, seed = 100): 
+    np.random.seed(seed)
+    random.seed(seed)
     ## Remove the QHCCID column 
     id_new_df = new_df["QHCCID"] 
     new_df = new_df.drop("QHCCID", axis=1)
@@ -302,7 +307,7 @@ def experiment_redcap_lab_radiomics(new_df, ids_train=None, ids_test=None, seed 
     # PCA
     if metafeatures.get("cor.mean", 0) > 0.9:
         print("Applying PCA due to high correlation...")
-        pca = PCA(n_components=min(10, X_train.shape[1]))
+        pca = PCA(n_components=min(10, X_train.shape[1]), random_state=seed)
         X_train_pca = pca.fit_transform(X_train)
         X_test_pca = pca.transform(X_test)
         
@@ -315,14 +320,15 @@ def experiment_redcap_lab_radiomics(new_df, ids_train=None, ids_test=None, seed 
     # SMOTE
     if metafeatures.get("class_ent", 0) < 0.5:
         print("Applying SMOTE due to class imbalance...")
-        smote = SMOTE(random_state=42)
+        smote = SMOTE(random_state=seed)
         X_train_smote, y_train_smote = smote.fit_resample(X_train, y_train)
         X_train = pd.DataFrame(X_train_smote, columns=X_train.columns)
         y_train = y_train_smote
 
     model = xgb.XGBClassifier(
         objective='binary:logistic',
-        eval_metric='logloss'
+        eval_metric='logloss',
+        random_state=seed
     )
 
     ## Feature selection to select the top k features with the highest mutual information values
@@ -330,7 +336,7 @@ def experiment_redcap_lab_radiomics(new_df, ids_train=None, ids_test=None, seed 
     
     min_features_to_select = new_X_train_imputed.shape[1]//2 # Minimum number of features to consider
     clf = model
-    cv = StratifiedKFold(5)
+    cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=seed)
 
     rfecv = RFECV(
         estimator=clf,
@@ -345,7 +351,7 @@ def experiment_redcap_lab_radiomics(new_df, ids_train=None, ids_test=None, seed 
     print(f"Optimal number of features: {rfecv.n_features_}")    
     num_features = rfecv.n_features_
     
-    selected_features = auto_feature_select(new_X_train_imputed, y_train, k=num_features)
+    selected_features = auto_feature_select(new_X_train_imputed, y_train, k=num_features, seed=seed)
     
     ## Retain the top k features with the highest mutual information values
     if isinstance(X_train, pd.DataFrame) and len(selected_features) <= X_train.shape[1]:
@@ -429,6 +435,8 @@ def main():
     new_df = pd.merge(new_df, df_2_cleaned, how="left", on="QHCCID")
     
     print("new_df.shape:", new_df.shape)
+    
+    new_df.to_csv("merged_full_dataset.csv", index=False)
 
     n_tabular = 47
     n_redcap = 16
@@ -462,6 +470,7 @@ def main():
     add_comb("Red", new_df.iloc[:, 0:16])
     add_comb("Lab", new_df.iloc[:, 16:47])
     add_comb("Red_Lab", new_df.iloc[:, 0:47])
+
 
     ## Perform patient-level random permutation cross validation
     ids_df = df["QHCCID"]
