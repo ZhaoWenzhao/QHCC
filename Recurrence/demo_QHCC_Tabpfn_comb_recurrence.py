@@ -1,8 +1,9 @@
 ## @package demo_QHCC_TabPFN
-# @version v1.1
+# @version v1.2
 # @brief The demo file for predicting recurrence in QHCC datasets using TabPFN
 import numpy as np
 import pandas as pd
+import random
 from collections import Counter
 from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_selection import mutual_info_classif, SelectKBest
@@ -33,9 +34,9 @@ os.environ['OMP_NUM_THREADS'] = '1'
 # @param  k: integer, the number of feature elements to be selected
 # Output: 
 # @return selected_features: the indexes of the selected features
-def auto_feature_select(X0, y0, k=1):
+def auto_feature_select(X0, y0, k=1, seed=100):
     
-    selector = SelectKBest(mutual_info_classif, k=k)
+    selector = SelectKBest(lambda X, y: mutual_info_classif(X, y, random_state=seed), k=k)
     X_new = selector.fit_transform(X0, y0)
 
     ## Indices of the selected features
@@ -70,7 +71,8 @@ def find_best_threshold_by_f1(y_true, y_probs):
 # @return acc: accuracy 
 # @return auc: AUC (area under the curve) score
 def experiment_redcap_lab(df, ids_train, ids_test, seed = 100): 
-
+    np.random.seed(seed)
+    random.seed(seed)
     ## Copy data
     new_df = df.copy()
     ids_df = df["QHCCID"]
@@ -141,34 +143,34 @@ def experiment_redcap_lab(df, ids_train, ids_test, seed = 100):
     print("Running RFECV to determine optimal number of features...")
     counter = Counter(y_train)
     neg, pos = counter[0], counter[1]
-    scale_pos_weight = neg / pos if pos > 0 else 1.0  # 防止除以 0
+    scale_pos_weight = neg / pos if pos > 0 else 1.0 
 
     rfecv_estimator = XGBClassifier(
         use_label_encoder=False,
         eval_metric='logloss',
         scale_pos_weight=scale_pos_weight
     )
-    cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+    cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=seed)
     rfecv = RFECV(estimator=rfecv_estimator, step=1, cv=cv, scoring="f1")
     rfecv.fit(X_train, y_train)
     optimal_k = rfecv.n_features_
     print(f"Optimal number of features selected by RFECV: {optimal_k}")
 
-    selected_feature_indices = auto_feature_select(X_train, y_train, k=optimal_k)
+    selected_feature_indices = auto_feature_select(X_train, y_train, k=optimal_k, seed=seed)
     X_train = X_train.iloc[:, selected_feature_indices]
     X_test = X_test.iloc[:, selected_feature_indices]
 
     # Dimensionality reduction (PCA)
     if metafeatures.get("cor.mean", 0) > 0.9:
         print("Applying PCA due to high correlation...")
-        pca = PCA(n_components=10)
+        pca = PCA(n_components=10, random_state=seed)
         X_train = pca.fit_transform(X_train)
         X_test = pca.transform(X_test)
 
     # Class imbalance handling (SMOTE)
     if metafeatures.get("class_ent", 0) < 0.5:
         print("Applying SMOTE due to class imbalance...")
-        smote = SMOTE(random_state=42)
+        smote = SMOTE(random_state=seed)
         X_train, y_train = smote.fit_resample(X_train, y_train)
     
     # Initialize TabPFNClassifier
@@ -212,7 +214,8 @@ def experiment_redcap_lab(df, ids_train, ids_test, seed = 100):
 # @return  acc: accuracy 
 # @return  auc: AUC (area under the curve) score 
 def experiment_redcap_lab_radiomics(new_df, ids_train=None, ids_test=None, seed = 100): 
-
+    np.random.seed(seed)
+    random.seed(seed)
     ## Remove the QHCCID column 
     id_new_df = new_df["QHCCID"] 
     new_df = new_df.drop("QHCCID", axis=1)
@@ -281,34 +284,34 @@ def experiment_redcap_lab_radiomics(new_df, ids_train=None, ids_test=None, seed 
     print("Running RFECV to determine optimal number of features...")
     counter = Counter(y_train)
     neg, pos = counter[0], counter[1]
-    scale_pos_weight = neg / pos if pos > 0 else 1.0  # 防止除以 0
+    scale_pos_weight = neg / pos if pos > 0 else 1.0 
 
     rfecv_estimator = XGBClassifier(
         use_label_encoder=False,
         eval_metric='logloss',
         scale_pos_weight=scale_pos_weight
     )
-    cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+    cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=seed)
     rfecv = RFECV(estimator=rfecv_estimator, step=1, cv=cv, scoring="f1")
     rfecv.fit(X_train, y_train)
     optimal_k = rfecv.n_features_
     print(f"Optimal number of features selected by RFECV: {optimal_k}")
 
-    selected_feature_indices = auto_feature_select(X_train, y_train, k=optimal_k)
+    selected_feature_indices = auto_feature_select(X_train, y_train, k=optimal_k, seed=seed)
     X_train = X_train.iloc[:, selected_feature_indices]
     X_test = X_test.iloc[:, selected_feature_indices]
 
     # Dimensionality reduction (PCA)
     if metafeatures.get("cor.mean", 0) > 0.9:
         print("Applying PCA due to high correlation...")
-        pca = PCA(n_components=10)
+        pca = PCA(n_components=10, random_state=seed)
         X_train = pca.fit_transform(X_train)
         X_test = pca.transform(X_test)
 
     # Class imbalance handling (SMOTE)
     if metafeatures.get("class_ent", 0) < 0.5:
         print("Applying SMOTE due to class imbalance...")
-        smote = SMOTE(random_state=42)
+        smote = SMOTE(random_state=seed)
         X_train, y_train = smote.fit_resample(X_train, y_train)
 
     # Initialize TabPFNClassifier
@@ -402,6 +405,7 @@ def main():
         combinations[name] = df_slice
         
     ## The different settings on using tabular data, CT, or MRI radiomics features
+
     add_comb("CT_MR", new_df.iloc[:, start_mr:])
     add_comb("CT", new_df.iloc[:, start_ct:])
     add_comb("MR", new_df.iloc[:, start_mr:start_ct])
